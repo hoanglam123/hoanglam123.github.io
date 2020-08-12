@@ -1,0 +1,111 @@
+.App {
+  /* margin: 20px; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;  
+  padding: 60px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);  
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+.fly-heart {
+  position: absolute;
+  background: url('images/heart.svg');
+  pointer-events: none;
+  /*transform: translate(-50%, -50%);*/
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: round;
+  animation: animate 4s linear infinite;
+  z-index: 10;
+  left: 30px;
+}
+
+@keyframes animate { 
+  50% {
+    transform: translate(20vh, 25vh);
+    opacity: 1;
+  }
+}
+.button {
+  background-color: white; 
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 20px;
+  border: 2px solid #008CBA;
+  color: black; 
+
+}
+.button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+#search_query{
+    border-bottom: solid 2px !important;
+    border: none;
+    padding: 3px 0px 3px 0px;
+}
+.header{
+  width: 100%;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+}
+.heart{
+  position: absolute;
+  background: url(/static/media/heart.38e2d648.svg);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  z-index: 10;
+  right: 80px;
+  bottom: 10px;
+}
